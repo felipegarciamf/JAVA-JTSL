@@ -39,12 +39,19 @@
 				<td>${p.preco}</td>
 				<td>${p.descricao}</td>
 				<td>${p.DataInicioVenda.time}</td>
-				<c:if test="${p.usado}">
+				
+				
+				<c:choose>
+				<c:when test="${p.usado}">
 				<td>Sim</td>
-				</c:if>
-				<c:if test="${not p.usado}">
+				</c:when>
+				
+				<!-- condição se nenhum when estiver certo -->
+				<c:otherwise>
 				<td>Não</td>
-				</c:if>
+				</c:otherwise>
+				
+				</c:choose>
 				
 				
 				<td><a href="#" onclick="return removeProduto(${p.id})">Remover</a></td>
