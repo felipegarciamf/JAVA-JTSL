@@ -45,12 +45,10 @@
 				<c:when test="${p.usado}">
 				<td>Sim</td>
 				</c:when>
-				
 				<!-- condição se nenhum when estiver certo -->
 				<c:otherwise>
 				<td>Não</td>
 				</c:otherwise>
-				
 				</c:choose>
 				
 				
@@ -58,6 +56,7 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="/produtos/produto/formulario">Adicionar um produto</a>
+	<c:url value="/produtos/formulario" var="urlAdicionar"></c:url>
+	<a href="${urlAdicionar}">Adicionar um produto</a>
 </body>
 </html>
