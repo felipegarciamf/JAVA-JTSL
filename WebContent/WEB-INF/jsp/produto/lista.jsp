@@ -1,6 +1,8 @@
 <%@page import="br.com.caelum.produtos.modelo.Produto"%>
 <%@page import="java.util.List"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -38,7 +40,8 @@
 				<td> ${p.nome}</td>
 				<td>${p.preco}</td>
 				<td>${p.descricao}</td>
-				<td>${p.DataInicioVenda.time}</td>
+				<fmt:formatDate value="${p.DataInicioVenda.time}" pattern="dd/MM/yyyy"/>
+				
 				
 				
 				<c:choose>
