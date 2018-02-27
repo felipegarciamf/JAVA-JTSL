@@ -38,7 +38,7 @@
 			<tr id="produto${p.dd}">
 				<td> ${st.count}</td>
 				<td> ${p.nome}</td>
-				<td>${p.preco}</td>
+				<fmt:formatNumber value="${p.preco}" type="currency" />
 				<td>${p.descricao}</td>
 				<fmt:formatDate value="${p.DataInicioVenda.time}" pattern="dd/MM/yyyy"/>
 				
