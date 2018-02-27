@@ -12,7 +12,7 @@
 <head>
 <script type="text/javascript" src="<c:url value="/js/jquery.js"/>"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title><fmt:message key="mensagem.bemvindo" /></title>
 </head>
 <body>
 	<script type="text/javascript">
@@ -21,7 +21,7 @@
 			$("#produto" + id).remove();
 		}
 	</script>
-
+	
 	<h1>Produtos</h1>
 	<div id="mensagem"></div>
 	<table width="100%">
@@ -60,6 +60,6 @@
 		</c:forEach>
 	</table>
 	<c:url value="/produtos/formulario" var="urlAdicionar"></c:url>
-	<a href="${urlAdicionar}">Adicionar um produto</a>
+	<a href="${urlAdicionar}"><fmt:message key="mensagem.novoProduto"/> </a>
 </body>
 </html>
